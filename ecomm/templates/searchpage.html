@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+    <!--advatisment section-->
+    <div class="container-fluid">
+
+      <div class="row"> 
+        <div class=col-4 id="searchpagefilter">
+          <div style="border:2px solid black;" class="mt-5">Filter</div>
+        </div>
+        <div class="col-8">
+        <h2 id="searchpageheading">{{category_name.name}}</h2><hr>
+       
+       {% for i in products %}
+       
+       <label><div class="card" style="width: 14.6rem;" id="product">
+       <a href=" {% url 'productview' i.category.slug  i.slug %}"> <img src="{{i.product_image.url}}" class="card-img-top" alt="..."><a>
+        <div class="card-body">
+          <h5 class="card-title" id="name{{i.id}}">{{i.name}}</h5>
+          <p class="card-text" id="product_price">{{i.original_price}}</p>
+          <p class="card-text" id="product_price">{{i.selling_price}}</p>
+          
+          <a href=""></a>
+        </div>
+      
+      </div></label>
+      
+
+    
+
+      
+       {% endfor %}
+      </div>
+    
+      </div>
+    </div>
+  
+
+    <!--for product shoe image-->
+  
+    <!--product sandal -->
+    
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+{% endblock  %}   

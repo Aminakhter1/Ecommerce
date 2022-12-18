@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% block content %}
+   
+     </div>
+     <!--this category section-->
+     <div class="container-fluid" style="background-color:pink;" >
+   
+      <div class="row">
+          <div class="col-md-12">
+          
+          <div class="row offset-4">
+           {% for item in category %}
+              <div class="col-2" >
+                  
+                   <b> <a href="{% url 'collectionview' item.slug %}" style="text-decoration:none;" id="category" >
+                      
+                          
+                               
+                          
+                          {{item.name}}
+   
+                      
+                    </a></b>
+                  
+   
+              </div>
+           {% endfor %}
+   
+          </div>
+   
+   
+          </div>
+   
+      </div>
+   </div>
+     <!--end category-->
+    <div class="container-fluid" >
+      {% for hello in Advatisment_objects %}
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="advatisment">
+        <div class="carousel-item active">
+          <img src="/media/{{hello.image_2}}" class="d-block w-100" alt="...">
+
+          
+
+        </div>
+        <div class="carousel-item">
+          <img src="/media/{{hello.image_2}}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/media/{{hello.image_3}}" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+      {% endfor %}
+
+    </div>
+    
+
+    <!--for product shoe image-->
+    <div class="container-fluid" id="Product_main">
+
+      <div class="row" id="product_header"> 
+        <h2 >Latest Shoes</h2>
+       
+       {% for i in Product_objects_shoe %}
+       {% if forloop.counter < 14  %}
+       <div class="card" style="width: 14.6rem;" id="product">
+        <a href=" {% url 'productview' i.category.slug  i.slug %}"> <img src="{{i.product_image.url}}" class="card-img-top" alt="..."><a>
+        <div class="card-body">
+          <h6 class="card-title" style="font-family:optima">{{i.name}}</h6>
+          <p class="card-text" style="font-family:optima">Rupees :<b>{{i.selling_price}}</b></p>
+          
+          <a href=""></a>
+        </div>
+      
+      </div>
+      
+
+       {% endif %}
+
+      
+       {% endfor %}
+    
+      </div>
+    </div>
+    <!--banner section-->
+    <div class="container-fluid" >
+      {% for hello in Advatisment_objects %}
+         <div>
+           <img src="/media/{{hello.image_sandle_1}}" class="d-block w-100" alt="...">
+
+        
+
+         </div>
+
+      {% endfor %}
+
+    </div>
+    <!--endbanner section-->
+
+
+
+    <!--product sandal -->
+
+    <div class="container-fluid">
+
+      <div class="row" id="product_header"> 
+        
+          
+        
+        
+          
+
+
+
+        
+        <h2 >Latest Sandles</h2><hr>
+       
+       {% for i in Product_objects_sandle %}
+       {% if forloop.counter < 5  %}
+       <div class="card" style="width: 22rem;" id="product">
+       <a href=" {% url 'productview' i.category.slug  i.slug %}"> <img src="{{i.product_image.url}}" class="card-img-top" alt="..."><a>
+      
+        <div class="card-body">
+          <h6 class="card-title" style="font-family:optima" >{{i.name}}</h6>
+          <p class="card-text" style="font-family:optima">{{i.selling_price}}</p>
+          <a href="#" ></a>
+
+        </div>
+      
+      </div>
+      
+
+       {% endif %}
+
+      
+       {% endfor %}
+    
+      </div>
+    </div>
+    <!--banner section-->
+    <div class="container-fluid" >
+      {% for hello in Advatisment_objects %}
+         <div>
+           <img src="/media/{{hello.image_sleeper_1}}" class="d-block w-100" alt="...">
+
+        
+
+         </div>
+
+      {% endfor %}
+
+    </div>
+    <!--endbanner section-->
+
+    <!--product sleeper-->
+    <div class="container-fluid">
+
+      <div class="row" id="product_header"> 
+        <h2 >Latest Sleeper</h2>
+       
+       {% for i in Product_objects_sleeper %}
+       {% if forloop.counter < 5  %}
+       <div class="card" style="width: 22rem;" id="product">
+       <a href=" {% url 'productview' i.category.slug  i.slug %}"> <img src="{{i.product_image.url}}" class="card-img-top" alt="..."><a>
+      
+        <div class="card-body">
+          <h5 class="card-title" style="font-family:optima" >{{i.name}}</h5>
+          <p class="card-text"style="font-family:optima" >{{i.selling_price}}</p>
+          <a href=''></a>
+
+        </div>
+      
+      </div>
+      
+
+       {% endif %}
+
+      
+       {% endfor %}
+    
+      </div>
+    </div>
+    <script>
+      alertify.set('notifier','position', 'top-right');
+      {% for msg in messages %}
+          alertify.success('{{msg}}');
+      
+      {% endfor %}
+    </script>
+    
+  
+
+  {% endblock %}
+
+
+
+  

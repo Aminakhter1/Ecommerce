@@ -1,0 +1,210 @@
+
+body{
+    background-color:white;
+}
+
+    
+    
+
+#product_header{
+    margin-left:20px;
+    margin-right:20px;
+    border:5px soild black;
+    
+
+    
+}
+#product_header h2{
+    background-color:white;
+    color:black;
+    border-radius:5px 5px 5px 5px;
+    box-shadow:5px 5px 2px 2px gray;
+    border:1px solid gray;
+    text-align:center;
+}
+
+#product{
+    margin-left:8px;
+    margin-top:5px;
+    margin-bottom:5px;
+    color:green;
+    
+}
+
+#signup{
+    flex:right;
+}
+#form{
+    background-color:black;
+    color:white;
+
+    
+    flex:center;
+    border-radius: 10px 10px 10px 10px;
+    padding-left:3rem;
+    padding-bottom:2rem;
+    padding-top:2rem;
+    padding-right:3rem;
+    margin-top:10px;
+    margin-bottom:10px;
+
+    
+}
+
+
+#detailimage image{
+    display:block;
+    margin-top:10px;
+}
+#detailimge{
+    margin-top:10px;
+    background-color:blue;
+}
+#header{
+    margin-left:100px;
+    margin-right:40px;
+    position:relative;
+}
+#headermain{
+    background-color:brown;
+}
+#logonavbar{
+    background-color:white;
+    padding:7px;
+    color:rgb(255, 0, 0);
+    font-weight:1000;
+    font-style:unset;
+    border-radius:10px 0px 10px 0px;
+
+}
+
+    
+
+#mynavbar #mast1 {
+   
+   
+   margin-left:auto;
+   
+}
+#mast1 li a{
+    margin-right:40px;
+    text-decoration:none;
+    color:white;
+    padding-top:5px;
+    border:2px sold black;
+}
+#mast1 li label{
+    text-decoration:none;
+}
+
+#mast li{
+    
+    margin-left:40px;
+}
+#loginpage{
+    background-color:darkorange;
+
+    border-radius:10px 10px 10px 10px;
+    box-shadow:10px 10px 20px 20px rgb(61, 59, 59);
+    margin-top:5rem;
+}
+#loginbody{
+    background-color:darkorange;
+}
+#signupbody{
+    background-color:darkorange;
+}
+#footer{
+    background-color:brown;
+    text-decoration:none;
+    
+}
+#footer div div a{
+    text-decoration:none;
+    color:white;
+    font-weight: 10px;
+    text-align:center;
+
+}
+#toast{
+    min-width:300px;
+    position:fixed;
+    bottom:30px;
+    left:800px;
+    margin-left:-120px;
+    background:#333;
+    padding:15px;
+    color:white;
+    text-align:center;
+    z-index:1;
+    font-size:18px;
+    visibility:hidden;
+    border-radius:5px 5px 5px 5px;
+
+
+}
+#toast.display{
+    visibility:visible;
+    animation:fadeIn 0.5, fadeOut 0.5;
+
+}
+@keyframes fadeIn{
+    from{
+        bottom: 0;
+        opacity:0;
+
+    }
+    to{
+        bottom:30px;
+        opacity:1;
+
+    }
+}
+@keyframes fadeOut{
+    from{
+        bottom:30px;
+        opacity:1;
+
+
+
+    }
+    to{
+        botton:0;
+        opacity:0;
+
+    }
+}
+    
+
+#checkoutmain{
+    background-color:green;
+}
+#searchpagefilter{
+    background-color:pink;
+    margin-top:5px;
+    box-shadow:5px 5px 0px 0px gray;
+    border-radius:5px 5px 5px 5px;
+    
+
+}
+#searchpagefilter div{
+    background-color:black;
+    color:white;
+    text-align:center;
+    border-radius:5px 5px 5px 5px;
+    box-shadow:5px 5px 0px 0px gray;
+}
+#searchpageheading{
+    background-color:black;
+    color:white;
+    text-align:center;
+    border-radius:5px 5px 5px 5px;
+    box-shadow:5px 5px 0px 0px gray;
+
+}
+#category{
+    border:5px solid white;
+    border-radius:5px 5px 5px 5px;
+    margin-left:10px;
+    color:white;
+}
